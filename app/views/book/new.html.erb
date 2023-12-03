@@ -1,0 +1,17 @@
+<h1>New Book</h1>
+
+<%= form_with(model: @book, url: book_path, method: :post) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+
+  <%= form.label :rating %>
+  <%= form.number_field :rating %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.submit 'Create Book' %>
+<% end %>
